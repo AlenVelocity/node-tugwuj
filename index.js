@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
 app.post('/generate-svg', async (req, res) => {
   try {
     const { htmlContent } = req.body;
-
+    console.log(req.body)
     if (!htmlContent) {
       return res.status(400).json({ error: 'HTML content is required' });
     }
